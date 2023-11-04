@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学而</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			opacity: 1;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background: rgba(244,244,244,1.00);
+			background-size: cover;
+		}
+		header {
+			width: 100%;
+			height: 94px;
+			padding: 0;
+			position: absolute;
+			background: white;
+			box-shadow: 0 3px 3px rgba(232,232,232,1.00);
+		}
+		header ul {
+			width: calc(100% - 360px);
+			height: 44px;
+			margin: 25px 258px;
+			display: flex;
+			align-items: center;
+		}
+		header li {
+			display: flex;
+			list-style: none;
+		}
+		li img {
+			width: 42px;
+			height: 42px;
+		}
+		.title {
+			display: block;
+			width:72px;
+			font-size: 34px;
+			text-decoration: none;
+			color: rgb(29,192,145);
+			position: relative;
+			left: 1px;
+			font-family: "SimHei";
+		}
+		.nav1 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width:72px;
+			height: 78px;
+			font-size: 23px;
+			text-decoration: none;
+			color: grey;
+			position: relative;
+			left: 44px;
+			font-family: "SimHei";
+			font-weight: bold;
+			border-top: 8px solid rgba(255,0,4,0.00);
+			border-bottom: 8px solid rgba(255,0,4,0.00);
+			transition: background 0.3s, border 0.3s, color 0.3s;
+		}
+		.nav1:hover {
+			background: rgba(233,233,233,1.00);
+		}
+		.nav1:focus {
+			border-top-color: rgba(255,0,4,1.00);
+			color: rgba(255,0,4,1.00);
+		}
+		.nav2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width:120px;
+			height: 78px;
+			font-size: 23px;
+			text-decoration: none;
+			color: grey;
+			position: relative;
+			left: 96px;
+			font-family: "SimHei";
+			font-weight: bold;
+			border-top: 8px solid rgba(255,0,4,0.00);
+			border-bottom: 8px solid rgba(255,0,4,0.00);
+			transition:  border 0.3s, background 0.3s, color 0.3s;
+		}
+		.nav2:hover {
+			background: rgba(233,233,233,1.00);
+		}
+		.nav2:focus {
+			border-top-color: rgba(255,0,4,1.00);
+			color: rgba(255,0,4,1.00);
+		}
+		.searchbox {
+			display: flex;
+		}
+		.search {
+			height: 34px;
+			width: 276px;
+			padding-left: 10px;
+			position: relative;
+			left: 212px;
+			border: 2px solid rgb(244,67,54);
+		}
+		.search:focus {
+			outline: none;
+		}
+		.submit {
+			width: 90px;
+			height: 38px;
+			border: 2px solid red;
+			background: url("img3.png");
+			background-repeat: no-repeat;
+			background-size: 36px 36px;
+			background-position: center;
+			background-color: rgb(244,67,54);
+			position: relative;
+			left: 208px;
+			transition: opacity 0.3s;
+		}
+		.submit:hover {
+			opacity: 0.8;
+		}
+		.hdimg {
+			width: 50px;
+			height: 50px;
+			position: relative;
+			left: 272px;
+		}
+		.exit {
+			height: 38px;
+			width: 110px;
+			position: relative;
+			left: 288px;
+			background: rgb(29,192,145);
+			border: none;
+			font-family: "SimHei";
+			color: aliceblue;
+			font-size: 16px;
+			transition: background 0.3s;
+		}
+		.exit:hover {
+			background:rgba(25,171,129,1.00);
+		}
+		.main {
+			width: calc(100% - 504px);
+			background: background: rgba(244,244,244,1.00);
+			margin: 0 252px;
+			position: absolute;
+			top: 91px;
+		}
+		.main-img {
+			width: 100%;
+			position: relative;
+			left: 8px;
+			top: 4px;
+		}
+		.main-col-up {
+			width: calc(100% - 148px);
+			height: 190px;
+			background: white;
+			padding: 40px 74px;
+			column-count: 4;
+		}
+		.main-col-down {
+			width: calc(100% - 148px);
+			height: 30px;
+			position: relative;
+			bottom: 75px;
+			background: white;
+			padding-left: 74px;
+			padding-right: 74px;
+			padding-top: 30px;
+			padding-bottom: 56px;
+			margin-bottom: 20px;
+			column-count: 4;
+		}
+		.main-col {
+			width: calc(100% - 148px);
+			height: 140px;
+			background: white;
+			padding: 0px 74px;
+			column-count: 4;
+			column-rule-style: solid;
+			column-rule-width: 1px;
+			column-rule-color: gray;
+			position: relative;
+			bottom: 72px
+		}
+		.main-col-a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 107px;
+			height: 107px;
+			border: 3px solid rgb(29,192,145);
+			border-radius: 55px;
+			position: relative;
+			left: 64px;
+			font-size: 36px;
+			color: rgb(29,192,145);
+			text-decoration: none;
+			transition: background 0.3s, color 0.3s;
+		}
+		.main-col-a:hover {
+			background: rgb(29,192,145);
+			color: aliceblue;
+		}
+		.main-col-ul {
+			position: relative;
+			left: 60px;
+		}
+		.main-col-ul li {
+			position: relative;
+			margin-bottom: 6px;
+			transition: color 0.3s;
+		}
+		.main-col-ul li:hover, .main-col-ul li:hover a{
+			color: rgba(255,123,125,1.00);
+		}
+		.link {
+			text-decoration: none;
+			color: grey;
+			transition: color 0.3s;
+		}
+		.link-up {
+			font-size: 15px;
+			font-weight: 500;
+		}
+		.link-down {
+			font-size: 13px;
+		}
+		.circle {
+			display: flex;
+			width: 26px;
+			height: 26px;
+			border: 2px solid rgb(29,192,145);
+			border-radius: 15px;
+			position: relative;
+			left: 104px;
+		}
+		.circle::before,
+		.circle::after {
+			content: "";
+			position: relative;
+			background-color: rgb(29,192,145);
+		}
+
+		.circle::before {
+			width: 1px;
+			height: 100%;
+			left: 50%;
+			top: 0;
+			transform: translateX(-0.5px); 
+		}
+
+		.circle::after {
+			width: 100%;
+			height: 0.5px;
+			left: 0;
+			top: 50%;
+			transform: translateY(-0.25px); 
+		}
+		.middle {
+			width: 100%;
+			background: white;
+			position: relative;
+			top: -80px;
+			padding-bottom: 58px;
+			margin-bottom: 20px;
+		}
+		.middle-head-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding-top: 30px;
+		}
+		.middle-head-p1 {
+			font-size: 20px;
+			font-weight: bold;
+			color: rgba(108,108,108,1.00);
+			margin-bottom: 4px;
+		}
+		.middle-head-p2 {
+			font-size: 14px;
+			color: rgb(29,192,145);
+			font-weight: bold;
+		}
+		.middle-net {
+			display: grid;
+			width: 70.4%;
+			height: 244px;
+			margin: 22px 14.8% 0 14.8%;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 122px 122px;
+		}
+		.middle-grid-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: dimgray;
+			text-decoration: none;
+			transition: background 0.3s, color 0.3s;
+		}
+		.middle-grid-item:hover {
+			background: rgb(29,192,145);
+			color: aliceblue;
+		}
+		.item1 {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			border-left: 3px solid rgb(29,192,145);
+			border-top: 3px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 1.5px solid rgb(29,192,145);
+		}
+		.item2 {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 3px solid rgb(29,192,145);
+		}
+		.item3 {
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 2px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 1.5px solid rgb(29,192,145);
+		}
+		.item4 {
+			grid-column-start: 4;
+			grid-column-end: 5;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 3px solid rgb(29,192,145);
+		}
+		.item5 {
+			grid-column-start: 5;
+			grid-column-end: 6;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 3px solid rgb(29,192,145);
+			border-right: 3px solid rgb(29,192,145);
+			border-bottom: 1.5px solid rgb(29,192,145);
+		}
+		.middle-grid-num {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: red;
+			font-size: 50px;
+			font-weight: lighter;
+		}
+		.num1 {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			border-top: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+		}
+		.num2 {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 1.5px solid rgb(29,192,145);
+		}
+		.num3 {
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+		}
+		.num4 {
+			grid-column-start: 4;
+			grid-column-end: 5;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-right: 1.5px solid rgb(29,192,145);
+			border-bottom: 1.5px solid rgb(29,192,145);
+		}
+		.num5 {
+			grid-column-start: 5;
+			grid-column-end: 6;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			border-left: 1.5px solid rgb(29,192,145);
+			border-top: 1.5px solid rgb(29,192,145);
+		}
+		.third {
+			width: 100%;
+			background: white;
+			position: relative;
+			top: -84px;
+		}
+		.third-flex-container {
+			display: flex;
+			justify-content: space-around;
+			width: 75.4%;
+			height: 122px;
+			margin: 70px 12.8% 0 12.8%;
+			padding-bottom: 178px;
+			z-index: 0;
+		}
+		.third-flex-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: calc((100% - 60px) / 4);
+			height: 122px;
+			background: rgba(247,123,114,1.00);
+			color: aliceblue;
+			z-index: 1;
+			overflow: hidden;
+			text-decoration: none;
+			transition: background 0.3s;
+		}
+		.third-flex-item:hover {
+			background: rgba(244,67,54,1.00);
+		}
+		.third-flex-item-p1 {
+			font-size: 22px;
+		}
+		.third-flex-item-p2 {
+			font-size: 16px;
+		}
+		.third-flex-item:hover + img {
+			top: 104px;
+		}
+		.rabbit1 {
+			width: 84px;
+			height: 50px;
+			position: absolute;
+			left: 212px;
+			top: 188px;
+			transition: top 0.3s;
+		}
+		.rabbit2 {
+			width: 84px;
+			height: 50px;
+			position: absolute;
+			left: 427px;
+			top: 188px;
+			transition: top 0.3s;
+		}
+		.rabbit3 {
+			width: 84px;
+			height: 50px;
+			position: absolute;
+			left: 642px;
+			top: 188px;
+			transition: top 0.3s;
+		}
+		.rabbit4 {
+			width: 84px;
+			height: 50px;
+			position: absolute;
+			left: 857px;
+			top: 188px;
+			transition: top 0.3s;
+		}
+		footer {
+			position: absolute;
+			bottom: -1256px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			height: 136px;
+			background: rgba(51,51,51,1.00);
+		}
+		footer img {
+			width: 348px;
+		}
+		.footer-div {
+			display: flex;
+		}
+		.footer-div div {
+			position: relative;
+			top: 4.5px;
+			left: 4px;
+			display: block;
+			width: 3px;
+			border-radius: 1.5px;
+			height: 11px;
+			background: rgb(247,123,134);
+		}
+		.footer-div p,div {
+			margin: 0 8px;
+			color: rgba(199,199,199,1.00);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li><img src="img2.png" alt="图标"></li>
+			<li><a class="title" href="#0">学而</a></li>
+			<li><a class="nav1" href="#0">首页</a></li>
+			<li><a class="nav2" href="#0">分类查看</a></li>
+			<li class="searchbox"><input type="text" class="search"><input type="submit" class="submit" value=""></li>
+			<li><img src="img4.png" alt="头像" class="hdimg"></li>
+			<button class="exit">退 出</button>
+		</ul>
+	</header>
+	<div class="main">
+		<img src="img1.png" alt="pic1" class="main-img">
+		<div class="main-col-up">
+			<a class="main-col-a" href="#0">公</a>
+			<a class="main-col-a" href="#0">通</a>
+			<a class="main-col-a" href="#0">素</a>
+			<a class="main-col-a" href="#0">专</a>
+		</div>
+		<div class="main-col">
+			<ul class="main-col-ul">
+				<li><a href="#0" class="link-up link">界面与设计应用</a><br><a href="#0" class="link-down link">房子</a></li>
+				<li><a href="#0" class="link-up link">java程序编程</a><br><a href="#0" class="link-down link">赵三金</a></li>
+				<li><a href="#0" class="link-up link">设计师的自我修养</a><br><a href="#0" class="link-down link">分享课程</a></li>
+			</ul>
+			<ul class="main-col-ul">
+				<li><a href="#0" class="link-up link">计算机基础</a><br><a href="#0" class="link-down link">胡薇</a></li>
+				<li><a href="#0" class="link-up link">植物观赏学基础</a><br><a href="#0" class="link-down link">韩一尾</a></li>
+				<li><a href="#0" class="link-up link">生活常识101</a><br><a href="#0" class="link-down link">分享</a></li>
+			</ul>
+			<ul class="main-col-ul">
+				<li><a href="#0" class="link-up link">新生引导课堂</a><br><a href="#0" class="link-down link">开学季</a></li>
+				<li><a href="#0" class="link-up link">党课精神研讨课</a><br><a href="#0" class="link-down link">分享课程</a></li>
+				<li><a href="#0" class="link-up link">专业方向</a><br><a href="#0" class="link-down link">毕业生</a></li>
+			</ul>
+			<ul class="main-col-ul">
+				<li><a href="#0" class="link-up link">影视广告摄影基础</a><br><a class="link-down link">分享课程</a></li>
+				<li><a href="#0" class="link-up link">程序员的养成</a><br><a class="link-down link">赵多金</a></li>
+				<li><a href="#0" class="link-up link">如何让设计师改稿</a><br><a class="link-down link">甲方</a></li>
+			</ul>
+		</div>
+		<div class="main-col-down">
+			<a class="circle" href="#0"></a>
+			<a class="circle" href="#0"></a>
+			<a class="circle" href="#0"></a>
+			<a class="circle" href="#0"></a>
+		</div>
+		<div class="middle">
+			<div class="middle-head-container">
+				<p class="middle-head-p1">最热课程动态</p>
+				<p class="middle-head-p2">精心为您推荐最佳口碑课程排行NO.1-NO.5</p>
+			</div>
+			<div class="middle-net">
+				<a class="middle-grid-item item1" href="#0">
+					<p>常勇</p><p>《化学生活》</p>
+				</a>
+				<a class="middle-grid-item item2" href="#0">
+					<p>李达</p><p>《大学生语文》</p>
+				</a>
+				<a class="middle-grid-item item3" href="#0">
+					<p>张勇</p><p>《java语言程序</p><p>设计》</p>
+				</a>
+				<a class="middle-grid-item item4" href="#0">
+					<p>苏燕</p><p>《视觉语言》</p>
+				</a>
+				<a class="middle-grid-item item5" href="#0">
+					<p>张国</p><p>《计算机组装》</p>
+				</a>
+				<a class="middle-grid-num num1" href="#0">
+					01
+				</a>
+				<a class="middle-grid-num num2" href="#0">
+					02
+				</a>
+				<a class="middle-grid-num num3" href="#0">
+					03
+				</a>
+				<a class="middle-grid-num num4" href="#0">
+					04
+				</a>
+				<a class="middle-grid-num num5" href="#0">
+					05
+				</a>
+			</div>
+		</div>
+		<div class="third">
+			<div class="middle-head-container">
+				<p class="middle-head-p1">猜你喜欢课程</p>
+				<p class="middle-head-p2">根据您的浏览记录，推荐相似课程列表</p>
+			</div>
+			<div class="third-flex-container">
+				<a class="third-flex-item" href="#0">
+					<p class="third-flex-item-p1">《毛泽东思想》</p>
+					<p class="third-flex-item-p2">赵三金</p>
+				</a><img src="img5.png" alt="rabbit" class="rabbit1">
+				<a class="third-flex-item" href="#0">
+					<p class="third-flex-item-p1">《邓小平理论》</p>
+					<p class="third-flex-item-p2">胡一薇</p>
+				</a><img src="img5.png" alt="rabbit" class="rabbit2">
+				<a class="third-flex-item" href="#0">
+					<p class="third-flex-item-p1">《科学发展观》</p>
+					<p class="third-flex-item-p2">梁非凡</p>
+				</a><img src="img5.png" alt="rabbit" class="rabbit3">
+				<a class="third-flex-item" href="#0">
+					<p class="third-flex-item-p1">《三个代表》</p>
+					<p class="third-flex-item-p2">韩一尾</p>
+				</a><img src="img5.png" alt="rabbit" class="rabbit4">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<img src="img6.png" alt="footer">
+		<div class="footer-div"><p class="footer-div">M U X I</p><p>S T U D I O</p><div></div><p>华中师范大学木犀团队</p></div>
+	</footer>
+</body>
+</html>
